@@ -75,5 +75,28 @@ int main() {
     // else{
     //     cout<<"Retirement time,Relax :)";
     // }
+
+    //Switch Statements
+    //Problem Statement-Take the day no and print the corresponding day
+    //for 1 print Monday and for 2 Tuesday and so on
+    int day;
+    cout<<"Enter a number to know the day!"<<endl;
+    cin>>day;
+    switch(day){
+        case 1:
+            cout<<"Modanday";
+            break;
+        case 2:
+            cout<<"Tuesday";
+            break;
+        case 3:
+            cout<<"Wednesday";
+            break;
+        case 4:
+            cout<<"Thrusday";
+            break;
+        default:
+            cout<<"Invalid input ,try again!";
+    }
     return 0;
 }
