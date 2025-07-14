@@ -130,9 +130,28 @@ void explainVector(){
     cout<<"The value of empty is:"<<v1.empty();
 }
 
+//3.list
+void explainList(){
+    list<int>ls;
+    ls.push_back(2);
+    ls.emplace_back(3);
+    
+    ls.push_front(4);
+    ls.emplace_front(5);
+    
+    for(auto it:ls){
+        cout<<it<<" ";
+    }
+    //all the functions same as vector
+    //Vector works on singly linked list 
+    //List works on doubly linked list
+    
+    //Only difference from vector is that it allows front operations because it is doubly linked list
+}
 
 int main() {
     // explainPairs();
-    explainVector();
+    //explainVector();
+    explainList();
     return 0;
 }
