@@ -1,4 +1,3 @@
-// Online C++ compiler to run C++ program online
 #include <bits/stdc++.h>
 using namespace std;
     //Standard Template Library
@@ -97,7 +96,38 @@ void explainVector(){
     for(auto it:v1){
         cout<<it<<" ";
     }
+    cout<<endl;
     //{2,14}
+    
+    
+    //Insert function
+    //v1={2,14}
+    v1.insert(v1.begin(),33);
+    v1.insert(v1.begin()+1,2,10);
+    cout<<"After Entering with insert function:"<<endl;
+    for(auto it:v1){
+        cout<<it<<" ";
+    }
+    //{33,10,10,2,14}
+    
+    //Size funtion-returns the size of the vector
+    cout<<"The size of v1 is:"<<v1.size()<<endl; //5
+    
+    //Pop back-removes the last element
+    v1.pop_back(); //{33,10,10,2}
+    
+    //Swap-swaps the 2 vectors
+    v1.swap(v2);
+    for(auto it:v2){
+        cout<<it<<" ";
+    }
+    cout<<endl;
+    
+    //clear-clears all the content inside it
+    v1.clear();
+    
+    //empty-returns a boolean 0 if empty and 1 if not empty
+    cout<<"The value of empty is:"<<v1.empty();
 }
 
 
