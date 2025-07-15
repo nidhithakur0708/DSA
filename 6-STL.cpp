@@ -148,10 +148,93 @@ void explainList(){
     
     //Only difference from vector is that it allows front operations because it is doubly linked list
 }
+//4.Deque
+//stands for double ended queue where the insertions are done by both front and back
+void explaindeque(){
+    deque<int>dq;
+    dq.push_back(1);//{1}
+    dq.emplace_back(3);//{1,3}
+    dq.push_front(5);//{5,1,3}
+    dq.emplace_front(2);//{2,5,1,3}
+    
+    dq.pop_back();//{2,5,1}
+    dq.pop_front();//{5,1}
+    
+    cout<<dq.front()<<endl;//{5}
+    cout<<dq.back()<<endl;//{1}
+    
+    for(auto it:dq){
+        cout<<it<<" "; //{5,1}
+    }
+    cout<<endl;
+}
+
+//5.Stack
+//Stack works on First in first out principle
+void explainStack(){
+    stack<int>st;
+    st.push(2);
+    st.push(34);
+    st.push(45);
+    st.emplace(23);
+    
+    //top() returns the top most element in the stack
+    cout<<st.top()<<endl; //23
+    
+    //pop() pops out the top most element in the stack
+    st.pop();//23
+    cout<<st.top()<<endl; //45
+    
+    cout<<st.size()<<endl;//3
+}
+
+//6.Queue
+void explainQueue(){
+    queue<int>q;
+    q.push(100);
+    q.push(122);
+    q.emplace(123);
+    
+    q.pop();//removes 100 the first element
+    q.back()+=10;//123+10=133
+    
+    cout<<"front element is: "<<q.front()<<endl;//122
+    cout<<"back element is: "<<q.back()<<endl;//123
+    
+}
+
+//7.Priority Queue
+//the largest element is stored at the top-MAX heap
+//internally it maintains a tree data structure
+void explainPQ(){
+    priority_queue<int>pq;
+    pq.push(5);
+    pq.push(400);
+    pq.push(6);
+    pq.emplace(34);//{400,34,6,5}
+        
+    cout<<pq.top()<<endl;//400
+    pq.pop();//{34,6,5}
+    
+    //size swap empty same as other functions
+    
+//Minimum heap-the smallest element will be out first!
+priority_queue<int,vector<int>,greater<int>>pq1;
+pq1.push(23);
+pq1.push(234);
+pq1.push(3);
+pq1.emplace(4);
+
+cout<<pq1.top();//3
+}
 
 int main() {
     // explainPairs();
     //explainVector();
-    explainList();
+    // explainList();
+    // explaindeque();
+    // explainStack();
+    // explainQueue();
+    // explainPQ();
     return 0;
 }
