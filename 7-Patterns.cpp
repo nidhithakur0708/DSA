@@ -130,6 +130,6 @@ int main(){
     cin>>n;
     // print7(n);
     // print8(n);
-    print12(n);
+    //print12(n);
 }
 
