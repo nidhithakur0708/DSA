@@ -124,6 +124,47 @@ void print12(int n){
     }
     
 }
+void print13(int n){
+    int count=1;
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=i;j++){
+            cout<<count<<" ";
+            count++;
+        }
+        cout<<endl;
+        
+    }
+}
+
+void print14(int n){
+    for(int i=0;i<n;i++){
+        //starting from A and then going till A+i,A+2=C
+        for(char ch='A';ch<='A'+i;ch++){
+            cout<<ch<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+void print15(int n){
+    for(int i=0;i<n;i++){
+        for(char ch='A';ch<='A'+(n-i-1);ch++){
+            cout<<ch<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+void print16(int n){
+    char ch='A';
+    for(int i=0;i<n;i++){
+        for(int j=0;j<=i;j++){
+            cout<<ch<<" ";
+        }
+        cout<<endl;
+        ch=ch+1;
+    }
+}
 
 int main(){
     int n;
