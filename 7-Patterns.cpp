@@ -145,7 +145,6 @@ void print14(int n){
         cout<<endl;
     }
 }
-
 void print15(int n){
     for(int i=0;i<n;i++){
         for(char ch='A';ch<='A'+(n-i-1);ch++){
@@ -187,11 +186,59 @@ void print17(int n){
         cout<<endl;
     }
 }
+void print18(int n){
+   for(int i=0;i<n;i++){
+       for(char ch='E'-i;ch<='E';ch++){
+           cout<<ch;
+       }
+       cout<<endl;
+   } 
+   
+}
+void print19(int n){
+    //For first half
+    int initial_space=0;
+    for(int i=0;i<n;i++){
+        //star
+        for(int j=1;j<=n-i;j++){
+            cout<<"*";
+        }
+        //space
+        for(int j=0;j<initial_space;j++){
+            cout<<" ";
+        }
+        //star
+        for(int j=1;j<=n-i;j++){
+            cout<<"*";
+        }
+        initial_space+=2;
+        cout<<endl;
+    }
+    //For second half-similar pattern 
+    initial_space=2*n-2;
+    for(int i=1;i<=n;i++){
+        //star
+        for(int j=1;j<=i;j++){
+            cout<<"*";
+        }
+        //space
+        for(int j=0;j<initial_space;j++){
+            cout<<" ";
+        }
+        //star
+        for(int j=1;j<=i;j++){
+            cout<<"*";
+        }
+        initial_space-=2;
+        cout<<endl;
+    }
+}
+
 int main(){
     int n;
     cin>>n;
     // print7(n);
-    // print8(n);
+    // print8(n); 
     //print12(n);
 }
 
