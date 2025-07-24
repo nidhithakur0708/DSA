@@ -78,14 +78,36 @@ cout<<1
 // }
 
 //6.Factorial of a number
-int fact(int n){
-    if(n==1) return 1;
-    return n*fact(n-1);
+// int fact(int n){
+//     if(n==1) return 1;
+//     return n*fact(n-1);
+// }
+// int main(){
+//     int n;
+//     cin>>n;
+//     cout<<fact(n);
+// }
+
+//7. Reverse a array
+void reverse_array(int i,int n,int arr[]){
+    if(i>=n/2) return;
+    swap(arr[i],arr[n-i-1]);
+    reverse_array(i+1,n,arr);
+    
 }
 int main(){
     int n;
     cin>>n;
-    cout<<fact(n);
+    int arr[n];
+    //Input for array
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    reverse_array(0,n,arr);
+    cout<<"Reversed array is:"<<endl;
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
 }
 
 
